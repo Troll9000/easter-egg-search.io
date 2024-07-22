@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easter Egg Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .search-container {
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <h1>Welcome to Easter Egg Search</h1>
+        <form id="searchForm" action="" method="get">
+            <input type="text" id="searchInput" name="query" placeholder="Search...">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var query = document.getElementById('searchInput').value;
+            if (query.toLowerCase() === 'easter egg') {
+                window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+            } else {
+                alert('Search for something else');
+                // Here you can handle other search queries if needed
+            }
+        });
+    </script>
+</body>
+</html>
